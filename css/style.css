@@ -1,0 +1,50 @@
+@charset 'utf-8';
+
+/* 変数(カスタムプロパティ) */
+:root {
+  /* 例)グローバル変数 */
+  --variable: value;
+
+  /* カラー */
+  --text-color: #333333;
+  --gray2: #4C524C;
+  --gray1: #9A9A9A;
+  --white: #FFFFFF;
+  --sub-color2: #DAE2DB;
+  --sub-color1: #F0F5F0;
+  --main-color: #73A776;
+  --base-color: #FDF7F3;
+
+  /* フォント */
+  --ff-base: "Noto Sans JP", "Hiragino Kaku Gothic ProN", Meiryo sans-serif;
+  --ff-en: Arial, sans-serif;
+}
+
+.box {
+  /* 例)ローカル変数 */
+  --variable: value;
+  /* 変数の使用例 */
+  background: var(--main-colors, yellow);
+}
+
+/* ============================
+ベーススタイル
+============================ */
+html {
+  /* ページ内リンクでアニメーションをかける */
+  scroll-behavior: smooth;
+
+  /* ベースのフォントサイズ(10px) */
+  font-size: 62.5%;
+}
+
+body {
+  font-family: var(--ff-base);
+  font-size: 1.4rem;
+  line-height: 1.7;
+}
+
+
+/* ============================
+コンポーネント
+============================ */
