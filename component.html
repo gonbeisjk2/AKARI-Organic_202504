@@ -14,6 +14,16 @@
     body {
       background-color: #ddd;
     }
+
+    .mask {
+      background-color: orange;
+      width: 100px;
+      height: 100px;
+      mask-image: url(img/common/icon-shopping-cart.svg);
+      mask-repeat: no-repeat;
+      mask-position: center center;
+      mask-size: contain;
+    }
   </style>
 </head>
 
@@ -27,6 +37,15 @@
   <button class="c-btn">Button</button>
   <a href="#" class="c-btn c-btn--white">Button</a>
   <a href="#" class="c-btn c-btn--accent">Button</a>
+  <a href="#" class="c-btn c-btn--icon">Button</a>
+  <a href="#" class="c-btn c-btn--icon c-btn--iconOuterLink">Button</a>
+  <a href="#" class="c-btn c-btn--icon c-btn--iconCart">Button</a>
+  <a href="#" class="c-btn c-btn--icon c-btn--iconPhone">Button</a>
+  <a href="#" class="c-btn c-btn--white c-btn--icon c-btn--iconPhone">Button</a>
+  <a href="#" class="c-btn c-btn--accent c-btn--icon c-btn--iconPhone">Button</a>
+
+
+  <div class="mask">あいうえお</div>
 
 
   <script src="js/script.js"></script>
