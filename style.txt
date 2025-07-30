@@ -1,0 +1,20 @@
+/* Color styles */
+--カンプ--text-color: #333333;
+--カンプ--gray2: #4C524C;
+--カンプ--gray1: #9A9A9A;
+--カンプ--white: #FFFFFF;
+--カンプ--sub-color2: #DAE2DB;
+--カンプ--sub-color1: #F0F5F0;
+--カンプ--main-color: #73A776;
+--カンプ--base-color: #FDF7F3;
+
+/* Text-size styles */
+--見出し1: 24px;
+--見出し2: 22px;
+--本文（大）: 15px;
+--本文（標準）: 14px;
+--size-xs: 12px;
+--size-sm: 14px;
+--size-md: 16px;
+--size-lg: 18px;
+--size-xl: 20px;
