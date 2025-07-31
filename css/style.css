@@ -154,3 +154,173 @@ a {
 .c-btn.c-btn--accent.c-btn--icon::before {
   background-color: var(--white);
 }
+
+/* 電話ボタン */
+.c-btnPhone {
+  background-color: var(--sub-color1);
+  border-radius: 8px;
+  padding: 16px 24px;
+  color: #000;
+  font-family: var(--ff-en);
+  font-size: 1.8rem;
+  letter-spacing: .1em;
+}
+
+.c-btnPhone::before {
+  content: '';
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  background-color: var(--main-color);
+  vertical-align: middle;
+  margin-right: 8px;
+  mask: url(../img/common/icon-phone.svg) no-repeat center center / contain;
+}
+
+/* セクション見出し */
+.c-sectTitle {
+  min-width: 327px;
+  text-align: center;
+  display: table;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.c-sectTitle__jp {
+  font-size: 2.4rem;
+  font-weight: 500;
+  color: var(--main-color);
+  letter-spacing: .1em;
+  margin-bottom: 5px;
+}
+
+.c-sectTitle__en {
+  font-family: var(--ff-en);
+  font-size: 1.4rem;
+  letter-spacing: .1em;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.c-sectTitle__en::before,
+.c-sectTitle__en::after {
+  content: '';
+  display: block;
+  width: 100px;
+  height: 1px;
+  background-color: var(--gray2);
+}
+
+.c-sectTitle.c-sectTitle--white .c-sectTitle__jp {
+  color: var(--white);
+}
+
+.c-sectTitle.c-sectTitle--white .c-sectTitle__en {
+  color: var(--white);
+}
+
+.c-sectTitle.c-sectTitle--white .c-sectTitle__en::before,
+.c-sectTitle.c-sectTitle--white .c-sectTitle__en::after {
+  background-color: var(--white);
+}
+
+/* 見出しA */
+.c-headingA {
+  font-size: 2.2rem;
+  font-weight: 500;
+  color: var(--text-color);
+  position: relative;
+  text-align: center;
+  padding-bottom: 10px;
+}
+
+.c-headingA::after {
+  content: '';
+  position: absolute;
+  width: 100px;
+  height: 2px;
+  background-color: var(--text-color);
+  left: 50%;
+  bottom: 0;
+  /* transform: translateX(-50%); */
+  translate: -50% 0;
+}
+
+@media screen and (min-width: 768px) {
+  .c-headingA {
+    text-align: start;
+  }
+
+  .c-headingA::after {
+    left: 0;
+    translate: 0 0;
+  }
+}
+
+/* 見出しB */
+.c-headingB {
+  font-size: 1.5rem;
+  font-weight: 500;
+  border-top: 1px solid var(--sub-color2);
+  border-bottom: 3px solid var(--sub-color2);
+  padding: 12px 0;
+}
+
+/* オンラインショップ */
+.c-onlineShop {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 280px;
+  gap: 40px;
+  background: url(../img/common/online-shop.webp) no-repeat center center / cover;
+  position: relative;
+  isolation: isolate;
+}
+
+.c-onlineShop::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(115, 167, 118, .32);
+  backdrop-filter: blur(10px);
+  z-index: -1;
+}
+
+/* ページタイトル */
+.c-pageTitle__heading {
+  background-color: var(--sub-color1);
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.c-pageTitle__headingText {
+  background-color: var(--white);
+  width: 200px;
+  height: 60px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+  font-weight: 400;
+  font-family: var(--ff-en);
+  letter-spacing: .1em;
+}
+
+.c-pageTitle__img {
+  height: 120px;
+}
+
+.c-pageTitle__img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
