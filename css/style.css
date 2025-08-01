@@ -353,3 +353,207 @@ a {
   レイアウト
 ============================ */
 /* ヘッダー */
+.l-header {
+  background-color: var(--white);
+  height: 70px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding-left: 24px;
+  padding-right: 14px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+
+.l-header__logo {
+  width: 140px;
+  flex-shrink: 0;
+}
+
+.l-header__navBtn {
+  width: 44px;
+  height: 44px;
+  appearance: none;
+  border: none;
+  background: none;
+  /* 全てのプロパティの値を破棄する */
+  /* all: unset; */
+  position: relative;
+}
+
+.l-header__navBtn span,
+.l-header__navBtn::before,
+.l-header__navBtn::after {
+  content: '';
+  background-color: var(--main-color);
+  width: 24px;
+  height: 2px;
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  translate: -50% -50%;
+}
+
+.l-header__navBtn::before {
+  top: calc(50% - 9px);
+}
+
+.l-header__navBtn::after {
+  top: calc(50% + 9px);
+}
+
+
+.l-header__nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--main-color);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.l-header__navClose {
+  position: absolute;
+  right: 16px;
+  top: 16px;
+  width: 44px;
+  height: 44px;
+  appearance: none;
+  border: none;
+  background: none;
+}
+
+.l-header__navClose::before,
+.l-header__navClose::after {
+  content: '';
+  width: 20px;
+  height: 2px;
+  background-color: var(--white);
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  translate: -50% -50%;
+}
+
+.l-header__navClose::before {
+  rotate: -45deg;
+}
+
+.l-header__navClose::after {
+  rotate: 45deg;
+}
+
+.l-header__navLogo {
+  width: 110px;
+  margin-bottom: 16px;
+}
+
+.l-header__navList {
+  list-style: none;
+  margin: 0;
+  margin-bottom: 40px;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.l-header__navItem a {
+  display: block;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  color: var(--white);
+  text-align: center;
+}
+
+.l-header__navItemEn,
+.l-header__navItemJp {
+  display: block;
+}
+
+.l-header__navItemEn {
+  font-family: var(--ff-en);
+  font-size: 1.6rem;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+}
+
+.l-header__navItemJp {
+  font-size: 1.2rem;
+}
+
+.l-header__navOnlineShopPc {
+  display: none;
+}
+
+@media screen and (min-width: 768px) {
+  .l-header__nav {
+    /* display: none; */
+  }
+
+  .l-header {
+    padding-left: 16px;
+    padding-right: 0;
+  }
+
+  .l-header__navBtn {
+    display: none;
+  }
+
+  .l-header__nav {
+    position: static;
+    width: auto;
+    background-color: transparent;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: stretch;
+  }
+
+  .l-header__navClose {
+    display: none;
+  }
+
+  .l-header__navLogo {
+    display: none;
+  }
+
+  .l-header__navList {
+    margin-bottom: 0;
+    flex-direction: row;
+  }
+
+  .l-header__navItem {
+    width: 140px;
+  }
+
+  .l-header__navItem a {
+    color: var(--text-color);
+    padding-top: 0;
+    padding-bottom: 0;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  .l-header__navItemJp {
+    color: var(--main-color);
+  }
+
+  .l-header__navOnlineShopPc {
+    display: block;
+    height: 100%;
+    line-height: 70px;
+  }
+
+  .l-header__navOnlineShopSp {
+    display: none;
+  }
+}
