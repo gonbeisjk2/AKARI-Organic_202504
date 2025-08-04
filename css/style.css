@@ -751,7 +751,7 @@ body {
     justify-content: flex-start;
   }
 
-  .l-columns.l-columns--end-pc {
+  .l-columns.l-columns--end {
     justify-content: flex-end;
   }
 
