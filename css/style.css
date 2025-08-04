@@ -775,3 +775,18 @@ a {
     width: calc(var(--col-width) * 12% + var(--col-gap) * 11%);
   }
 }
+
+
+/* コンテナ */
+.l-container {
+  padding-right: 24px;
+  padding-left: 24px;
+  /* 1160px + 24px + 24px = 1208px */
+  max-width: 1208px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+/* ============================
+  プロジェクト
+============================ */
