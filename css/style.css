@@ -373,6 +373,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  z-index: 1000;
 }
 
 
@@ -429,6 +430,27 @@ body {
   align-items: center;
   /*TODO: あとで消す*/
   /* display: none; */
+
+  /* 透明にして非表示にする */
+  opacity: 0;
+  display: none;
+  transition: all .3s;
+  transition-behavior: allow-discrete;
+}
+
+body.is-nav-open .l-header__nav {
+
+  /* bodyにis-nav-openというクラスが追加されたときに表示する */
+
+  opacity: 1;
+  display: flex;
+}
+
+/* display: flexになった時（表示された時）の初期の要素の状態 */
+@starting-style {
+  body.is-nav-open .l-header__nav {
+    opacity: 0;
+  }
 }
 
 .l-header__navClose {
