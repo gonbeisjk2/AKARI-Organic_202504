@@ -428,7 +428,7 @@ body {
   justify-content: center;
   align-items: center;
   /*TODO: あとで消す*/
-  display: none;
+  /* display: none; */
 }
 
 .l-header__navClose {

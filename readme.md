@@ -1,5 +1,5 @@
-#AKARI Organic Sample Code
+# AKARI Organic Sample Code
 
 2025年4月クラス用AKARI Organicのサンプルコードです。
 
-##クラスノート
+## クラスノート
