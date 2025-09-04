@@ -453,6 +453,13 @@ body.is-nav-open .l-header__nav {
   }
 }
 
+@media screen and (min-width: 768px) {
+  .l-header__nav {
+    display: flex;
+    opacity: 1;
+  }
+}
+
 .l-header__navClose {
   position: absolute;
   right: 16px;
