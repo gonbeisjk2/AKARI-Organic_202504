@@ -98,6 +98,28 @@
       </div>
     </section>
 
+    <h2>Food Scienceの投稿一覧</h2>
+    <div id="food-science">
+      <script>
+        // (async () => {})()
+        (async () => {
+          const resource = await fetch('http://foodscience.tokyo/wp-json/wp/v2/posts')
+          const posts = await resource.json()
+          console.log(posts)
+          console.log(posts[0].title.rendered)
+
+          let html = ''
+          posts.forEach(post => {
+            html += `<div>
+              <a href="${post.link}" target="_blank">${post.date} - ${post.title.rendered}</a>
+              </div>`
+          })
+
+          const foodScience = document.querySelector('#food-science')
+          foodScience.insertAdjacentHTML('beforeend', html)
+        })()
+      </script>
+    </div>
 
     <section>
       <div class="l-columns">
