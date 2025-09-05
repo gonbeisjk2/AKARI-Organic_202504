@@ -919,6 +919,9 @@ body.is-nav-open .l-header__nav {
 
 .p-productsItem__listImg img {
   /* opacity: .5; */
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .p-productsItem__listDesc {
@@ -954,4 +957,35 @@ body.is-nav-open .l-header__nav {
 
 .p-productsItem__listLink {
   text-align: center;
+}
+
+@media screen and (min-width: 768px) {
+  .p-productsItem__listContainer {
+    align-items: center;
+  }
+
+  .p-productsItem__listImg {
+    /* 最小400px ~ 65vh ~ 最大600px */
+    height: clamp(400px, 65vh, 600px);
+    width: calc(var(--col-width) * 7% + var(--col-gap) * 6% + 24px);
+    margin-right: 0;
+    /* margin-left: 0; */
+  }
+
+  .p-productsItem__listDesc {
+    margin-top: 0;
+    margin-left: calc(var(--col-width) * -2% + var(--col-gap) * -1%);
+    /* ２カラム分左にずれたので、幅にもう２カラム足す */
+    width: calc(var(--col-width) * 4% + var(--col-gap) * 3% + var(--col-width) * 2% + var(--col-gap) * 1%);
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .p-productsItem__listImg {
+    /*400px / 2 = 200px */
+    --offset: calc((100vw - 1200px) / 2);
+    /* 200px x -1 = -200px */
+    margin-left: calc(var(--offset) * -1);
+
+  }
 }
