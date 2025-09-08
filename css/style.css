@@ -353,6 +353,48 @@ a {
   margin-bottom: .8rem;
 }
 
+/* 製品一覧 */
+.c-products__list {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.c-products__listItem:not(:first-child) {
+  margin-top: 24px;
+}
+
+.c-products__link {
+  display: flex;
+  gap: calc(var(--col-gap) * 1%);
+  align-items: center;
+  color: var(--text-color);
+}
+
+.c-products__listImg,
+.c-products__listTitle {
+  width: 50%;
+}
+
+@media screen and (min-width: 768px) {
+  .c-products__listItem:not(:first-child) {
+    margin-top: 0;
+  }
+
+  .c-products__link {
+    flex-direction: column;
+  }
+
+  .c-products__listImg,
+  .c-products__listTitle {
+    width: auto;
+  }
+
+  .c-products__listTitle {
+    margin-top: 24px;
+  }
+}
+
 /* ============================
   レイアウト
 ============================ */
