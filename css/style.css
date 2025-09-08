@@ -985,7 +985,7 @@ body.is-nav-open .l-header__nav {
     /*400px / 2 = 200px */
     --offset: calc((100vw - 1200px) / 2);
     /* 200px x -1 = -200px */
-    margin-left: calc(var(--offset) * -1);
-
+    margin-left: calc(var(--offset) * -1 - 24px);
+    width: calc(var(--col-width) * 7% + var(--col-gap) * 6% + var(--offset) + 24px);
   }
 }
