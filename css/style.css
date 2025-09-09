@@ -1031,3 +1031,57 @@ body.is-nav-open .l-header__nav {
     width: calc(var(--col-width) * 7% + var(--col-gap) * 6% + var(--offset) + 24px);
   }
 }
+
+
+/* FAQ */
+.p-faq__listItem:not(:first-of-type) {
+  margin-top: 24px;
+}
+
+.p-faq__listQ {
+  min-height: 45px;
+  background-color: #F0F5F0;
+  padding-left: 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: var(--main-color);
+}
+
+.p-faq__listBtn {
+  border: none;
+  background-color: var(--main-color);
+  width: 45px;
+  height: 45px;
+  position: relative;
+}
+
+.p-faq__listBtn::before,
+.p-faq__listBtn::after {
+  content: '';
+  display: block;
+  width: 23px;
+  height: 1px;
+  background-color: #fff;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  /* 移動させる, 要素の半分の幅と高さ */
+  translate: -50% -50%;
+  /* transform: translate(-50%, -50%); */
+}
+
+.p-faq__listBtn::after {
+  rotate: 90deg;
+  /* transform: translate(-50%, -50%) rotate(90deg); */
+  transition: rotate .3s;
+}
+
+.p-faq__listBtn.is-open::after {
+  rotate: 0deg;
+}
+
+.p-faq__listA {
+  margin-top: 24px;
+  display: none;
+}
